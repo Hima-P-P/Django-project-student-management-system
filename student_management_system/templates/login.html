@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css1/login.css' %}">
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="username" name="u" class="input-box" placeholder="username" required>
+                        <input type="password" name="p" class="input-box" placeholder="password" required>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+
+                    </form>
+
+                </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+{% endblock %}
+

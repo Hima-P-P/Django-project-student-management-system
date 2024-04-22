@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<title>Registration form</title> 
+<link rel="stylesheet" href="{% static 'css1/signup.css' %}">
+
+<body>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}      
+        <div class="register">
+            <h2>Student Registration</h2>
+            <div class="content">
+                <div class="input-box">
+                <label for="name">FullName:</label>
+                <input type="text" placeholder="Enter Your Name" name="f" required>
+                </div>
+                <div class="input-box">
+                <label for="username">UserName:</label>
+                <input type="text" placeholder="Enter Your Username" name="u" required>
+                </div>
+                <div class="input-box">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter Your Password" name="p" required>
+                </div>
+               
+                <div class="input-box">
+                <label for="conformpassword">Conform Password:</label>
+                <input type="password" placeholder="Conform Your Password" name="cp" required>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Phone Number:</label>
+                    <input type="phonenumber" placeholder="Enter Your Phone Number" name="n" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Email:</label>
+                        <input type="email" placeholder="Enter Your Email Id" name="e" required>
+                        </div>
+                    <div class="input-box">
+                        <label for="address">Address:</label>
+                        <input type="text" placeholder="Enter Your Address" name="a" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="dateofbirth">DOB:</label>
+                            <input type="date" placeholder="Enter Your Date of Birth" name="d" required>
+                            </div>
+                            <span class="gender-title">Gender:</span>
+                            <div class="gender-category">
+                                <input type="radio" name="g" id="male">
+                                <label for="male">Male</label>
+                                <input type="radio" name="g" id="female">
+                                <label for="female">Female</label>
+                            </div></div>  
+                <!-- <span class="qualification-title">Qualification:</span>
+                <div class="qualification-category">
+                    <select name="qn" id="quali">   
+                        <option for="quali" value="bsc">BSC</option>
+                        <option value="msc">MSC</option>
+                        <option value="bcom">BCOM</option>
+                        <option value="mcom">MCOM</option>
+                        <option value="ba">BA</option>
+                        <option value="ma">MA</option>
+                        <option value="btech">BTECH</option>
+                        <option value="mtech">MTECH</option>
+                        <option value="bba">BBA</option>
+                        <option value="mba">MBA</option>
+                        <option value="plustwo">PLUS TWO</option>
+                        <option value="iti">ITI</option>
+                        <option value="diploma">DIPLOMA</option>
+                        </select>    
+                    </div>
+                    <span class="course-title" style="color:white;font-weight: bold;">Course Opted:</span>
+                    <div class="course-category">
+                        <select name="course" id="cou">   
+                            <optgroup label="Web Designing Courses">
+                            <option for="course" value="html">HTML</option>
+                            <option for="course" value="css">CSS and Bootstrap</option>
+                            <option for="course" value="javascript">JavaScript</option>
+                            </optgroup>
+                            <optgroup label="Software Development Courses">
+                            <option for="course" value="python">Python Fullstack</option>
+                            <option for="course" value="testing">Software Testing</option>
+                            <option for="course" value="mearnstack">MEARNSTACK</option>
+                            </optgroup>
+                            <optgroup label="Multimedia Courses">
+                            <option for="course" value="3d">3D ANIMATION</option>
+                            <option for="course" value="filmmaking">Digital Film Making</option>
+                            <option for="course" value="graphic">Graphic Design</option>
+                            </optgroup>
+                            <optgroup label="Hardware and Networking Courses">
+                            <option for="course" value="networking">Computer Networking</option>
+                            <option for="course" value="cybersecurity">IT Fundamental for Cyber Security</option>
+                            <option for="course" value="cloud">Cloud Fundamentals</option>
+                            </optgroup>
+                            <optgroup label="Accounting Courses">
+                            <option for="course" value="financial">Financial Accounting</option>
+                            <option for="course" value="analytics">Accounting Data Ananlytics</option>
+                            <option for="course" value="sap">SAP</option>
+
+                            </select>    
+                        </div></div> -->
+                <div class="button-container">
+                    <button type="submit">Register</button>
+                </div>
+</div>
+            </form>
+        </div>
+    </div></div>
+</body>
+
+{% endblock %}

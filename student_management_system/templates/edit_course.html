@@ -1,0 +1,21 @@
+    <!-- Main content -->
+    {% extends 'adminhome.html' %}
+    {% block page_title %}
+     Edit Course |Username : {{staff.staff_name}} | #ID : {{staff.id}}
+
+    {% endblock page_title %}
+    {% block main_content %}
+
+        
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <table>
+            {{form.as_table}}
+          </table>
+         <input type="submit">
+
+
+   
+    {% endblock main_content %}
+       
+    

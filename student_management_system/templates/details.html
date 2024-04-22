@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css2/astyle.css' %}">
+
+
+{% block content %}
+<div class="container mt-5" style="margin-bottom:60px;margin-left:250px">
+  <div class="row">
+      <div class="col-lg-6 height:500px">
+        <center>
+        <h4 class="fw-bold" style="color: brown;">{{p.subject_name}} </h4>
+        <h6 class="mt-2" style="text-indent:20px;line-height:2;color: rgb(2, 2, 97);">{{p.desc}}</h6>
+        <div class="col-lg-6 height:500px">
+          <img class="img-fluid rounded" src="{{p.image.url}}" height="470px" width="470px"></div> </div>
+</div></center>
+        <ul>
+       <li><h6 class="mt-2" style="text-indent:20px;line-height: 2;text-align: justify;color: rgb(3, 87, 3);">Duration:{{p.duration}}</h6></li>
+       <li><h6 class="mt-2" style="text-indent:20px;line-height: 2;text-align: justify;color: rgb(3, 87, 3);">Total Fee:{{p.totalfee}}</h6></li>
+        <li><h6 class="mt-2" style="text-indent:20px;line-height: 2;text-align: justify;color: rgb(3, 87, 3);">No.of Installment:{{p.no_of_installment }}</h6></li>
+      </ul>
+
+          <h4 class="fw-bold" style="color:brown">Syllabus</h4>
+            <ul id="accordion">
+              <li>
+    
+                <label for="first" style="color:rgb(70, 6, 70);font-weight: bold;">{{p.outline_1}}<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="first" checked>
+                <div class="content">
+                  <p class="mt-2" style="color:rgb(186, 71, 9)">{{p.content_1}}</p>
+                </div>
+              </li>
+              <li>
+                 <label for="second" style="color:rgb(70, 6, 70);font-weight: bold;">{{p.outline_2}}<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="second" >
+                <div class="content">
+                  <p class="mt-2" style="color:rgb(186, 71, 9)">{{p.content_2}}</p>
+                </div>
+              </li> 
+              <li>
+                <label for="third" style="color:rgb(70, 6, 70);font-weight: bold;">{{p.outline_3}}<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="third" >
+                <div class="content">
+                  <pclass="mt-2" style="color:rgb(186, 71, 9)">{{p.content_3}}</p>
+                </div>
+              </li>
+              <li>
+                <label for="fourth" style="color:rgb(70, 6, 70);font-weight: bold;">{{p.outline_4}}<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="fourth" >
+                <div class="content">
+                  <pclass="mt-2" style="color:rgb(186, 71, 9)">{{p.content_4}}</p>
+                </div>
+              </li>
+              <li>
+                <label for="fifth" style="color:rgb(70, 6, 70);font-weight: bold;">{{p.outline_5}}<span>&#x3e;</span></label>
+                <input type="radio" name="accordion" id="fifth" >
+                <div class="content">
+                  <pclass="mt-2" style="color:rgb(186, 71, 9)">{{p.content_5}}</p>
+                </div>
+              </li>
+              
+            </ul>
+
+           </div>
+
+           </div>
+            </div>
+
+ {% endblock %}
+
+
